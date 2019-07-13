@@ -1,0 +1,94 @@
+@import "../../app.scss";
+
+.navbar__container{
+    width: 60px;
+    height: 100vh;
+    position: fixed;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    list-style: none;
+    writing-mode:vertical-lr ;
+    text-orientation: upright;
+    background: rgba(0, 0, 0, 0.363);
+    transition: all 0.2s ease-in-out;
+    
+    .fa-rocket{
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        text-align: center;
+        font-size: 30px;
+        height: 60px;
+        padding: 12px;
+        width: 100%;
+        background: $secondary;
+        color:#5b636e;
+        border: 2px solid rgba(0, 0, 0, 0.377);
+        
+        transition: all 0.5s ease-in-out;
+        cursor: pointer;
+        
+    }
+
+    .fa-rocket:hover{
+        color: $primary-light;
+        
+        
+    }
+    .navbar__sidebar-1, .navbar__sidebar-2{
+        position: absolute;
+        top: 0;
+        left:0;
+        z-index: 1;
+        background: red;
+        height: 0px;
+        width: 10px;
+        background: rgba(255, 255, 255, 0.061);
+        transition: all 0.2s ease-in-out;
+        transition-delay: 0.1s;
+    }
+    .navbar__sidebar-2{
+        background: rgb(255, 255, 255);
+        transition: all 0.2s ease-in-out;
+        transition-delay: 0.3s;
+    }
+
+    
+    
+    li{
+        margin-top: 60px;
+        font-weight: 900;
+        color: $secondary;
+        font-size: 2vh;
+        padding: 20px 10px;
+        cursor: pointer;
+        transition: all 0.6s ease-in-out;
+    }
+    
+    li:hover{
+        color: $primary-light;
+        
+    }
+    
+    li:nth-child(2):hover ~ span{
+        height: 26.3vh;
+        top: 10vh;
+    }
+    li:nth-child(3):hover ~ span{
+        height: 13.5vh;
+        top: 46vh;
+    }
+    li:nth-child(4):hover ~ span{
+        height: 27vh;
+        top: 70vh;
+    }
+    
+}
+
+.navbar__container:hover{
+    background: rgba(0, 0, 0, 0.616);
+}  
+
+ 

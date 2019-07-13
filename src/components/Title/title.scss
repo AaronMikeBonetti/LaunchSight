@@ -1,0 +1,81 @@
+@import "../../app.scss";
+
+.title__container{
+    position: relative;
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+    background-image: url("../../imgs/SpaceX-Launch.jpg");
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 50% 1fr 0%;
+    grid-template-rows: 40% 1fr 0%;
+    filter: brightness(110%);
+    
+    .title__jumbotron__container{
+        grid-column: 2;
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: 10% 20% 60% 10%;
+        grid-template-rows:1fr 20px 1fr 1fr;
+        color: $primary-light;
+        background: rgba(0, 0, 0, 0.26);
+        padding: 2vw;
+        border-top-left-radius: 5%;
+        
+        .title__jumbotron__header{
+            grid-column: 1/-1;
+            grid-row: 1;
+            text-align: left;
+            margin: auto 0;
+            font-size: 3vw;
+            padding-left: 4.5vw;
+            
+        }
+        hr{
+            display: block;
+            grid-column: 2/4;
+            grid-row: 2;
+            display: block;
+            position: relative;
+            bottom: 0;
+            height: 3px;
+            background: rgba(255, 255, 255, 0.157);
+            border: none;
+            width: 80%;
+
+            
+        }
+        .title__jumbotron__paragraph-1{
+            display: block;
+            grid-column: 2/4;
+            grid-row: 3;
+            font-size: 2vw;
+            margin: auto;
+            ;
+            span{
+                color: black;
+                font-family: 'Lobster';
+            }
+        }
+        .title__jumbotron__icons{
+            
+            grid-column: 2/4;
+            grid-row: 5;
+            display: flex;
+            justify-content: space-around;
+            align-self: flex-start;
+            list-style: none;
+            font-size: 3vw;
+            padding-bottom: 4vw;
+            color: $primary-light;
+            i{
+            border: 0.2vw solid rgba(255, 255, 255, 0.157);
+            padding: 2vw;
+            border-radius:50%;
+            }
+            
+        }
+    }
+}
