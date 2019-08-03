@@ -1,0 +1,170 @@
+html {
+  font-family: "Kodchasan";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.launch__card__container {
+  height: 100%;
+  width: 100%;
+}
+
+.launch__card__container .launch__header {
+  position: relative;
+  z-index: 2;
+  grid-column: 1/-1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  text-align: center;
+  font-size: 2vw;
+  padding: 10px;
+}
+
+.launch__card__container .launch__card__front {
+  position: relative;
+  z-index: 1;
+  -ms-grid-columns: 10% 1fr 10%;
+      grid-template-columns: 10% 1fr 10%;
+  -ms-grid-rows: 10% 50% 30% 10%;
+      grid-template-rows: 10% 50% 30% 10%;
+  cursor: pointer;
+}
+
+.launch__card__container .launch__card__front img {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+  -webkit-filter: brightness(0.7);
+          filter: brightness(0.7);
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.launch__card__container .launch__card__front .launch__details__front {
+  position: relative;
+  z-index: 2;
+  grid-column: 1/-1;
+  grid-row: 3/-1;
+  background: rgba(69, 75, 82, 0.26);
+  height: 100%;
+  margin: auto;
+  padding: 20px;
+}
+
+.launch__card__container .launch__card__front .launch__details__front .launch__location__front {
+  font-size: 1.5vw;
+}
+
+.launch__card__container .launch__card__front .launch__details__front .launch__date__front {
+  padding-top: 5px;
+  font-size: 1vw;
+}
+
+.launch__card__container .launch__card__front .launch__button {
+  position: relative;
+  z-index: 400;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 4;
+  grid-row: 4;
+  margin: 5px auto;
+  text-align: center;
+  font-size: 1vw;
+  color: #f6ca8f;
+  -webkit-transition: color 2s;
+  transition: color 2s;
+}
+
+.launch__card__container .launch__card__front .launch__button:hover,
+.launch__card__container .launch__card__front .launch__button:focus {
+  text-decoration: underline;
+}
+
+.launch__card__container .launch__card__back {
+  position: relative;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  -ms-grid-columns: 10% 1fr 10%;
+      grid-template-columns: 10% 1fr 10%;
+  -ms-grid-rows: 20% 1fr;
+      grid-template-rows: 20% 1fr;
+  background: rgba(0, 0, 0, 0.253);
+  cursor: pointer;
+}
+
+.launch__card__container .launch__card__back .launch__details__back {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  list-style: none;
+}
+
+.launch__card__container .launch__card__back .launch__details__back .launch__location__back,
+.launch__card__container .launch__card__back .launch__details__back .launch__date__back,
+.launch__card__container .launch__card__back .launch__details__back .launch__campsite__back {
+  font-size: .8vw;
+}
+
+.hidden {
+  display: none;
+}
+
+.active {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+  width: 100%;
+  -webkit-animation: slideIn 1s;
+          animation: slideIn 1s;
+  color: white;
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    opacity: 0;
+    color: rgba(255, 255, 255, 0);
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  90% {
+    color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    color: rgba(255, 255, 255, 0);
+  }
+  30% {
+    opacity: 0;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  90% {
+    color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.launch__card__container:focus img,
+.launch__card__container:hover img {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+/*# sourceMappingURL=launch_card.css.map */

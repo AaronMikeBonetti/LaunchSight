@@ -1,10 +1,10 @@
 //A simple way to Redux App 
 
 import React from 'react';
-import { createStore, applyMiddleware } from "redux"
-import "./app.scss"
-import Loader from "./components/Loader/Loader"
-import Navbar from "./components/Navbar/Navbar"
+import { createStore, applyMiddleware } from 'redux'
+import './app.css'
+import Loader from './components/Loader/Loader'
+import Navbar from './components/Navbar/Navbar'
 import Title from './components/Title/Title';
 import Launches from './components/Launches/Launches';
 
@@ -25,11 +25,11 @@ const middleware = []
 //We Create A Reducer that takes in the current store and an action
 
 const rootReducer = (store =DEFAULT_SETTINGS, action) => {
-  console.log("store", store, "action", action)
+  console.log('store', store, 'action', action)
 
 //Here we compare the action type to the action that was dispatched
 
-  if(action.type === "SET_GAME_STARTED"){
+  if(action.type === 'SET_GAME_STARTED'){
     return{
       
     }
@@ -51,14 +51,14 @@ const store = createStore(rootReducer, initialState, applyMiddleware(...middlewa
 
 const action1 = {
   gameStarted: true,
-  type:""}
+  type:''}
 
 //Here we are dispatching it 
 
-console.log("store Dispatched Action1", store.dispatch(action1))
+console.log('store Dispatched Action1', store.dispatch(action1))
 
 
-console.log("store Final", store.getState());
+console.log('store Final', store.getState());
 
 
 

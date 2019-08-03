@@ -6,12 +6,13 @@
     height: 100vh;
     width: 100%;
     background-image: url("../../imgs/SpaceX-Launch.jpg");
-    background-position: center;
+    background: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.3) 49%, rgba(0, 0, 0, 0.75) 100%), url('../../imgs/SpaceX-Launch.jpg') no-repeat;
+    background-position: top;
     background-size: cover;
     display: grid;
     grid-template-columns: 50% 1fr 0%;
     grid-template-rows: 40% 1fr 0%;
-    filter: brightness(110%);
+    filter: brightness(130%);
     
     .title__jumbotron__container{
         grid-column: 2;
@@ -19,10 +20,12 @@
         display: grid;
         grid-template-columns: 10% 20% 60% 10%;
         grid-template-rows:1fr 20px 1fr 1fr;
-        color: $primary-light;
-        background: rgba(0, 0, 0, 0.26);
+        color: rgb(7, 7, 7);
+        background: rgba(255, 255, 255, 0);
         padding: 2vw;
         border-top-left-radius: 5%;
+        color: rgba(255, 255, 255, 0.623);
+        font-weight: 100;
         
         .title__jumbotron__header{
             grid-column: 1/-1;
@@ -30,7 +33,10 @@
             text-align: left;
             margin: auto 0;
             font-size: 3vw;
+            font-family: 'Lobster', cursive;
+            letter-spacing: 1px;
             padding-left: 4.5vw;
+
             
         }
         hr{
@@ -39,7 +45,7 @@
             grid-row: 2;
             display: block;
             position: relative;
-            bottom: 0;
+            top: 0;
             height: 3px;
             background: rgba(255, 255, 255, 0.157);
             border: none;
@@ -54,25 +60,20 @@
             font-size: 2vw;
             margin: auto;
             ;
-            span{
-                color: black;
-                font-family: 'Lobster';
-            }
         }
         .title__jumbotron__icons{
-            
             grid-column: 2/4;
-            grid-row: 5;
+            grid-row: 4;
             display: flex;
             justify-content: space-around;
             align-self: flex-start;
             list-style: none;
-            font-size: 3vw;
-            padding-bottom: 4vw;
+            font-size: 2vw;
+            padding-bottom: 0vw;
             color: $primary-light;
             i{
             border: 0.2vw solid rgba(255, 255, 255, 0.157);
-            padding: 2vw;
+            padding: 1vw;
             border-radius:50%;
             }
             
