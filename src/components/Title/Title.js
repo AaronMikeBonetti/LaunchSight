@@ -5,7 +5,9 @@ export default class Title extends Component {
     render() {
         return (
             <div className='title__container'>
+                <div className="clouds__img"></div>
                 <div className='title__jumbotron__container'>
+                    
                     <h1 className='title__jumbotron__header'>Launch-Sight</h1>
                     <hr/>
                     <p className='title__jumbotron__paragraph-1'>Seeing rocket science doesn't have to be rocket science.</p>
@@ -17,7 +19,6 @@ export default class Title extends Component {
                         
                     </ul>
                 </div>
-                
             </div>
         )
     }

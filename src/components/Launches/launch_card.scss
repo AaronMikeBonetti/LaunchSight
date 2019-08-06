@@ -3,6 +3,7 @@
     height: 100%;
     width: 100%;
     
+    
     .launch__header{
         position: relative;
         z-index: 2;
@@ -77,7 +78,7 @@
     height: 100%;
     width: 100%;
     grid-template-columns: 10% 1fr 10%;
-    grid-template-rows: 20% 1fr;
+    grid-template-rows: 20% 1fr 40% 10%;
     background: rgba(0, 0, 0, 0.253);
     
     cursor: pointer;
@@ -90,7 +91,16 @@
         .launch__campsite__back{
             font-size: .8vw;
             }
+        
             
+        }
+        .launch__campsite-img__back{
+            grid-column: 2;
+            grid-row: 3;
+            background:url('./google-imgs/KSC.png');
+            background-size: cover;
+            height: 100%;
+            width: 100%;
         }
     }
 }

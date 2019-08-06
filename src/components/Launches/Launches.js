@@ -17,7 +17,7 @@ export default class Launches extends Component {
                 },
                 {'name':'KSC Campground',
                  'location':'Audobon Rd, Merritt Island, FL 32953',
-                 'googleImg':'../../imgs/google-imgs/KSC.png'
+                 'googleImg':'./google-imgs/KSC.png'
                 },
                 {'name':'Manatee Hammock Park',
                  'location':'7275 S. US 1 Titusville, FL 32780',

@@ -21,7 +21,7 @@ export default function LaunchCardFront(props){
             <li className='launch__date__back'><span>Launch Date: </span>{props.date}</li>
             <li className='launch__campsite__back'><span>Closest Campsite: </span>{props.campsite}</li>
             </ul>
-            <img className='launch__campsite-img__back' src='../../imgs/google-imgs/KSC.png' alt={props.campsite}/>
+            <div className='launch__campsite-img__back'  alt={props.campsite}/>
             </div>
         </div>
     )

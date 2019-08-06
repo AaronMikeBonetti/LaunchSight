@@ -92,8 +92,8 @@ html {
   width: 100%;
   -ms-grid-columns: 10% 1fr 10%;
       grid-template-columns: 10% 1fr 10%;
-  -ms-grid-rows: 20% 1fr;
-      grid-template-rows: 20% 1fr;
+  -ms-grid-rows: 20% 1fr 40% 10%;
+      grid-template-rows: 20% 1fr 40% 10%;
   background: rgba(0, 0, 0, 0.253);
   cursor: pointer;
 }
@@ -110,6 +110,17 @@ html {
 .launch__card__container .launch__card__back .launch__details__back .launch__date__back,
 .launch__card__container .launch__card__back .launch__details__back .launch__campsite__back {
   font-size: .8vw;
+}
+
+.launch__card__container .launch__card__back .launch__campsite-img__back {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  background: url("./google-imgs/KSC.png");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
 
 .hidden {

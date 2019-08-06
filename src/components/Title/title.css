@@ -16,14 +16,29 @@ html {
   background: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.3) 49%, rgba(0, 0, 0, 0.75) 100%), url("../../imgs/SpaceX-Launch.jpg") no-repeat;
   background-position: top;
   background-size: cover;
+  background-attachment: fixed;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 50% 1fr 0%;
       grid-template-columns: 50% 1fr 0%;
-  -ms-grid-rows: 40% 1fr 0%;
-      grid-template-rows: 40% 1fr 0%;
+  -ms-grid-rows: 40% 1fr 5%;
+      grid-template-rows: 40% 1fr 5%;
   -webkit-filter: brightness(130%);
           filter: brightness(130%);
+}
+
+.title__container .clouds__img {
+  background: url("../../imgs/clouds1.png");
+  background-repeat: no-repeat;
+  width: 90%;
+  height: 100%;
+  position: absolute;
+  z-index: 100;
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  bottom: -40px;
+  left: 20px;
 }
 
 .title__container .title__jumbotron__container {
