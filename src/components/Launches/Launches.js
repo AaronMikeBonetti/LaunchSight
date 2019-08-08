@@ -1,6 +1,9 @@
 import React, { Component } from 'react'
 import './launches.css'
 import LaunchCard from './LaunchCard'
+import KSCImg from '../../assets/imgs/google-imgs/KSC.png'
+import KOAImg from '../../assets/imgs/google-imgs/KOA.png'
+import ManateeImg from '../../assets/imgs/google-imgs/Manatee.png'
 
 
 
@@ -13,19 +16,19 @@ export default class Launches extends Component {
             campsites:[
                 {'name':'Jetty Park',
                  'location':'9035 Campground Circle Cape Canaveral, Florida 32920',
-                 'googleImg':''
+                 'campsiteImg':KSCImg
                 },
                 {'name':'KSC Campground',
                  'location':'Audobon Rd, Merritt Island, FL 32953',
-                 'googleImg':'./google-imgs/KSC.png'
+                 'campsiteImg':KSCImg
                 },
                 {'name':'Manatee Hammock Park',
                  'location':'7275 S. US 1 Titusville, FL 32780',
-                 'googleImg':''
+                 'campsiteImg':ManateeImg
                 },
                 {'name':'KOA Campground',
                  'location':'4513 West Main Street Mims, FL 32754',
-                 'googleImg':''
+                 'campsiteImg':KOAImg
                 }
             ],   
                
@@ -46,12 +49,15 @@ export default class Launches extends Component {
             switch(launch.location.pads[0].id){
                case 84:
                   launch.campsite = this.state.campsites[1].name
+                  launch.campsiteImg = this.state.campsites[1].campsiteImg
                 break 
                case 85:
-                    launch.campsite = this.state.campsites[1].name
+                launch.campsite = this.state.campsites[2].name
+                launch.campsiteImg = this.state.campsites[2].campsiteImg
                 break 
                case 62:
-                    launch.campsite = this.state.campsites[1].name 
+                launch.campsite = this.state.campsites[3].name
+                launch.campsiteImg = this.state.campsites[3].campsiteImg 
                 break 
                 default:
                     launch.campsite = "unknown"
@@ -59,19 +65,6 @@ export default class Launches extends Component {
         })
     }
     
-    addCampsiteImg = () =>{
-        this.state.launches.forEach(launch=>{
-            switch(launch.location.pads[0].id){
-               case 84:
-                  launch.campsiteImg = this.state.campsites[1].googleImg
-                break 
-                default:
-                    launch.campsiteImg = "unknown"
-            }   
-        })
-    }
-
-
     async fetchLaunches(){
         try {
             let response = await fetch(this.state.launchesURL)
@@ -116,8 +109,7 @@ flipCard = (launch) =>{
    async componentDidMount(){
        await this.fetchLaunches()
        await this.addActiveState()
-       await this.addCampsite()
-       await this.addCampsiteImg() 
+       await this.addCampsite() 
        await this.setState({})
     }
 

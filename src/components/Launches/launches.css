@@ -17,6 +17,8 @@ html {
       grid-template-rows: 300px;
   grid-auto-rows: 35vw;
   background: #808997;
+  -webkit-box-shadow: -40px -20px 60px;
+          box-shadow: -40px -20px 60px;
 }
 
 .launches__container .launches__header__container {
