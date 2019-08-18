@@ -2,24 +2,42 @@
 .launch__card__container{
     height: 100%;
     width: 100%;
-    
-    
+
     .launch__header{
         position: relative;
         z-index: 2;
         grid-column: 1/-1;
         grid-row: 1;
         text-align: center;
-        font-size: 2vw;
+        font-size: 1.5vw;
         padding: 10px;
+        text-shadow: none;
+        animation: flicker 2s;
+        
 
     }
+    .launch__card__front:nth-child(0){
+        position: relative;
+        z-index: 1;
+        grid-template-columns: 1fr;
+        grid-template-rows: 10% 50% 30% 10%;
+        cursor: pointer;
+    }
+
     .launch__card__front{
         position: relative;
         z-index: 1;
         grid-template-columns: 10% 1fr 10%;
         grid-template-rows: 10% 50% 30% 10%;
         cursor: pointer;
+
+        
+        
+        .launch__header{
+            text-shadow:none;
+        }
+        
+        
 
     img{
         position: relative;
@@ -28,7 +46,7 @@
         height: 100%;
         grid-column: 1/-1;
         grid-row: 1/-1;
-        filter: brightness(0.7);
+        filter: brightness(0.4);
         transition: all 0.5s;
         
     }
@@ -42,14 +60,19 @@
         background: rgba(69, 75, 82, 0.26);
         height: 100%;
         margin: auto;
-        padding: 20px;
+        text-shadow: none;
+        animation: none;
+        padding: 10px;
+        text-align: center;
+        
+        
     
         .launch__location__front{
-        font-size: 1.5vw;
+        font-size: 1.2vw;
         }
         .launch__date__front{
-        padding-top: 5px;
-        font-size: 1vw;
+        padding-top: 15px;
+        font-size: 0.8vw;
         }
         
     }
@@ -60,9 +83,10 @@
         grid-row: 4;
         margin: 5px auto;
         text-align: center;
-        font-size: 1vw;
+        font-size: 0.8vw;
         color: rgb(246, 202, 143);
         transition: color 2s;
+        text-shadow: none;
         
     }
     .launch__button:hover,
@@ -79,23 +103,28 @@
     width: 100%;
     grid-template-columns: 5% 1fr 5%;
     grid-template-rows: 20% 1fr 50% 5%;
-    background: rgba(0, 0, 0, 0.253);
+    background:rgba(0, 0, 0, 0.198);
+    text-align: left;
     
-    cursor: pointer;
+    
+    .launch__header{
+        text-shadow: 0px 0px 5px rgb(255, 255, 255);
+    }
+    
     .launch__details__back{
         grid-column: 2;
         grid-row: 2;
         list-style: none;
+        
         span{
             color:$primary-dark
         }
         .launch__location__back,
         .launch__date__back,
         .launch__campsite__back{
-            font-size: 1vw;
+            font-size: 0.7vw;
             }
-        
-            
+           
         }
         .launch__campsite-img__back{
             grid-column: 2;
@@ -103,6 +132,8 @@
             background-size: cover;
             height: 100%;
             width: 100%;
+            
+            
         }
     }
 }
@@ -138,4 +169,5 @@
 .launch__card__container:focus img,
     .launch__card__container:hover img{
         filter: brightness(1);
+
     }

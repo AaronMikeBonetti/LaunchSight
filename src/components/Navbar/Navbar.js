@@ -8,6 +8,7 @@ export default class Navbar extends Component {
 
         }
     }
+    
     render() {
         return (
             <ul className='navbar__container'>
@@ -17,8 +18,7 @@ export default class Navbar extends Component {
                     <li>MAP</li>
                     <li>CAMPSITES</li>
                     <span className='navbar__sidebar-1'></span>
-                    <span className='navbar__sidebar-2'></span>
-                    
+                    <span className='navbar__sidebar-2'></span>    
             </ul>
         )
     }

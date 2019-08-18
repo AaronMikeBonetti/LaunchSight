@@ -10,7 +10,6 @@ export default function LaunchCardFront(props){
             <div className='launch__details__front'>
                 <h2 className='launch__location__front'>{props.location}</h2>
                 <h2 className='launch__date__front'>{props.date}</h2>
-                
             </div>
             <h2 className='launch__button'>Learn More <i className='fas fa-arrow-right'></i></h2>
             </div>
@@ -21,7 +20,7 @@ export default function LaunchCardFront(props){
             <li className='launch__date__back'><span>Launch Date: </span>{props.date}</li>
             <li className='launch__campsite__back'><span>Best Campsite: </span>{props.campsite}</li>
             </ul>
-            <img src={props.campsiteImg}className='launch__campsite-img__back'  alt={props.campsite}/>
+            <img className='launch__campsite-img__back' src={props.campsiteImg} alt={props.campsite}/>
             </div>
         </div>
     )

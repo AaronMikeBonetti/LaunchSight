@@ -1,9 +1,10 @@
 html {
-  font-family: "Kodchasan";
+  font-family: "Orbitron";
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0;
   margin: 0;
+  scroll-behavior: smooth;
 }
 
 .launch__card__container {
@@ -18,8 +19,21 @@ html {
   -ms-grid-row: 1;
   grid-row: 1;
   text-align: center;
-  font-size: 2vw;
+  font-size: 1.5vw;
   padding: 10px;
+  text-shadow: none;
+  -webkit-animation: flicker 2s;
+          animation: flicker 2s;
+}
+
+.launch__card__container .launch__card__front:nth-child(0) {
+  position: relative;
+  z-index: 1;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 10% 50% 30% 10%;
+      grid-template-rows: 10% 50% 30% 10%;
+  cursor: pointer;
 }
 
 .launch__card__container .launch__card__front {
@@ -32,6 +46,10 @@ html {
   cursor: pointer;
 }
 
+.launch__card__container .launch__card__front .launch__header {
+  text-shadow: none;
+}
+
 .launch__card__container .launch__card__front img {
   position: relative;
   z-index: 1;
@@ -39,8 +57,8 @@ html {
   height: 100%;
   grid-column: 1/-1;
   grid-row: 1/-1;
-  -webkit-filter: brightness(0.7);
-          filter: brightness(0.7);
+  -webkit-filter: brightness(0.4);
+          filter: brightness(0.4);
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
@@ -53,16 +71,20 @@ html {
   background: rgba(69, 75, 82, 0.26);
   height: 100%;
   margin: auto;
-  padding: 20px;
+  text-shadow: none;
+  -webkit-animation: none;
+          animation: none;
+  padding: 10px;
+  text-align: center;
 }
 
 .launch__card__container .launch__card__front .launch__details__front .launch__location__front {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
 }
 
 .launch__card__container .launch__card__front .launch__details__front .launch__date__front {
-  padding-top: 5px;
-  font-size: 1vw;
+  padding-top: 15px;
+  font-size: 0.8vw;
 }
 
 .launch__card__container .launch__card__front .launch__button {
@@ -74,10 +96,11 @@ html {
   grid-row: 4;
   margin: 5px auto;
   text-align: center;
-  font-size: 1vw;
+  font-size: 0.8vw;
   color: #f6ca8f;
   -webkit-transition: color 2s;
   transition: color 2s;
+  text-shadow: none;
 }
 
 .launch__card__container .launch__card__front .launch__button:hover,
@@ -94,8 +117,12 @@ html {
       grid-template-columns: 5% 1fr 5%;
   -ms-grid-rows: 20% 1fr 50% 5%;
       grid-template-rows: 20% 1fr 50% 5%;
-  background: rgba(0, 0, 0, 0.253);
-  cursor: pointer;
+  background: rgba(0, 0, 0, 0.198);
+  text-align: left;
+}
+
+.launch__card__container .launch__card__back .launch__header {
+  text-shadow: 0px 0px 5px white;
 }
 
 .launch__card__container .launch__card__back .launch__details__back {
@@ -113,7 +140,7 @@ html {
 .launch__card__container .launch__card__back .launch__details__back .launch__location__back,
 .launch__card__container .launch__card__back .launch__details__back .launch__date__back,
 .launch__card__container .launch__card__back .launch__details__back .launch__campsite__back {
-  font-size: 1vw;
+  font-size: 0.7vw;
 }
 
 .launch__card__container .launch__card__back .launch__campsite-img__back {

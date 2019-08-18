@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import './launches.css'
 import LaunchCard from './LaunchCard'
+import MainLaunchCard from './MainLaunchCard'
 import KSCImg from '../../assets/imgs/google-imgs/KSC.png'
 import KOAImg from '../../assets/imgs/google-imgs/KOA.png'
 import ManateeImg from '../../assets/imgs/google-imgs/Manatee.png'
@@ -42,14 +43,31 @@ export default class Launches extends Component {
         })
         
     }
+
+    countDownClock = () =>{
+        
+        let today = Number(Date.now().toString().split('').splice(0,10).join(''))
+        let secondsRemaining =this.state.launches[0].netstamp - today
+        let minutesRemaining =Math.floor((this.state.launches[0].netstamp/60) - (today/60))
+        let hoursRemaining =Math.floor(minutesRemaining/60)
+        let daysRemaining =Math.floor(hoursRemaining/24)
+        this.setState({
+        secondsRemaining:secondsRemaining,
+        minutesRemaining:minutesRemaining,
+        hoursRemaining:hoursRemaining,
+        daysRemaining:daysRemaining})
+    }
     
     addCampsite = () =>{
         
-        this.state.launches.forEach(launch=>{
+        let launches = this.state.launches
+
+        launches.forEach(launch=>{
             switch(launch.location.pads[0].id){
                case 84:
                   launch.campsite = this.state.campsites[1].name
                   launch.campsiteImg = this.state.campsites[1].campsiteImg
+                  
                 break 
                case 85:
                 launch.campsite = this.state.campsites[2].name
@@ -63,6 +81,8 @@ export default class Launches extends Component {
                     launch.campsite = "unknown"
             }   
         })
+       
+        this.setState({launches})
     }
     
     async fetchLaunches(){
@@ -71,7 +91,7 @@ export default class Launches extends Component {
             let data = await response.json()
         
             await this.setState({
-            //I filtered out all the launches that were not at Cape Canaveral and limited the results to 10
+            //I filtered out all the launches that were not at Cape Canaveral and limited the results to 7
                 launches: data.launches.filter(launch=>{
                     let launches = []
                     if(launch.location.id===16||launch.location.id===18){
@@ -80,7 +100,7 @@ export default class Launches extends Component {
                     else{
                         return null
                     }
-                }).splice(0,9), 
+                }).splice(0,7), 
         })
 
         }
@@ -92,32 +112,63 @@ export default class Launches extends Component {
     
     
 flipCard = (launch) =>{
-        
-        this.state.launches.forEach(stateLaunch=>{
+        let launches = this.state.launches
+        launches.forEach(stateLaunch=>{
             if(stateLaunch.id === launch.id){
-                this.setState(prevState=>{
-                    launch.frontCardActive = !launch.frontCardActive
-                })
-                
+                return  launch.frontCardActive = !launch.frontCardActive 
             }
-            this.setState({})
-            
+            else{
+                return
+            }
     }) 
+        this.setState({launches})
 }
 
-    
-   async componentDidMount(){
-       await this.fetchLaunches()
-       await this.addActiveState()
-       await this.addCampsite() 
-       await this.setState({})
-    }
+async updateData(){
+    await this.fetchLaunches()
+    await this.addActiveState()
+    await this.addCampsite()
+    await this.countDownClock()
+    // await setInterval(() => {
+    //     this.countDownClock()
+    //   }, 1000);
+}
 
+    componentDidMount(){
+       this.updateData()
+       
+    }
+    
+
+    
 
     render() {
-        // this.addCampsite()
-        console.log(this.state.launches)
-       const frontCard = this.state.launches.map(launch=>{
+        console.log(this.state.launches[0])
+       const launchCard = this.state.launches.map(launch=>{
+           if(this.state.launches[0].id===launch.id){
+            return <MainLaunchCard
+            frontCardClass={launch.frontCardActive?'main__launch__card__front active':'main__launch__card__front hidden'}
+            backCardClass={!launch.frontCardActive?'main__launch__card__back active':'main__launch__card__back hidden'}
+            value={launch} 
+            flipCard={this.flipCard}
+            key={launch.id} 
+            name={launch.rocket.name} 
+            img={launch.rocket.imageURL}
+            date={launch.net}
+            location={launch.location.pads[0].name}
+            description={launch.missions[0].description}
+            status={launch.status===1?`Green`:`Red`}
+            campsite={launch.campsite} 
+            campsiteImg={launch.campsiteImg}
+            seconds={this.state.secondsRemaining}
+            minutes={this.state.minutesRemaining}
+            hours={this.state.hoursRemaining}
+            days={this.state.daysRemaining}
+            >
+                
+            </MainLaunchCard>
+           }
+           else{
             return <LaunchCard
             frontCardClass={launch.frontCardActive?'launch__card__front active':'launch__card__front hidden'}
             backCardClass={!launch.frontCardActive?'launch__card__back active':'launch__card__back hidden'}
@@ -129,22 +180,29 @@ flipCard = (launch) =>{
             date={launch.net}
             location={launch.location.pads[0].name}
             campsite={launch.campsite} 
-            campsiteImg={launch.campsiteImg} 
+            campsiteImg={launch.campsiteImg}
+
             >
+            
             </LaunchCard>
             
+            }
         })
+    
        
         
     
     
         return(
             <div className='launches__container'>
+                
                 <div className='launches__header__container'>
                     <h1>Launches</h1>
                     <p>This site will give you the run down on what's going up, when its going and where the best places to catch a glimpse are.</p>
+                    
                 </div>
-                {frontCard}
+                
+                {launchCard}
                 
 
             </div>

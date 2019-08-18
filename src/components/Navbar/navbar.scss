@@ -1,7 +1,7 @@
 @import "../../app.scss";
 
 .navbar__container{
-    width: 60px;
+    width: 50px;
     height: 100vh;
     position: fixed;
     z-index: 10;
@@ -14,6 +14,7 @@
     text-orientation: upright;
     background: rgba(0, 0, 0, 0.37);
     transition: all 0.2s ease-in-out;
+    font-family: "Orbitron";
 
     
     
@@ -21,12 +22,12 @@
         position: absolute;
         z-index: 2;
         top: 5px;
+        left: 0px;
         text-align: center;
-        font-size: 30px;
+        font-size: 25px;
         height: 60px;
         padding: 12px;
-        width: 100%;
-        
+        width: 80%;
         color:white;
         transition: all 0.5s ease-in-out;
         cursor: pointer;
@@ -43,8 +44,8 @@
 
     .fa-fire{
         position: absolute;
-        top: 53px;
-        left: 17.5px;
+        top: 47px;
+        left: 13.5px;
         font-size: 20px;
         transform: rotate(180deg);
         transition: all ease-in-out;
@@ -87,8 +88,8 @@
 
     li{
         font-weight: 900;
-        color: $secondary;
-        font-size: 1.7vh;
+        color:$primary-light;
+        font-size: 1.3vh;
         cursor: pointer;
         transition: all 0.6s ease-in-out;
     }
