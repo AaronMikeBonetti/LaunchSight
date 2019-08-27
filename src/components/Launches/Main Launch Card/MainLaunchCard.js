@@ -4,10 +4,8 @@ import "./main_launch_card.css"
 export default function LaunchCardFront(props){
     return (
         <div onClick={()=>{props.flipCard(props.value)}} className='launch__card__container'>
-            
             <div className={props.frontCardClass}>
             <img className='launch__img' src={props.img} alt={props.name}/>
-            
             <div className='launch__details__front'>
             <div className='launch__card__circle'></div>
             <div className='launch__card__corner__tl'></div>

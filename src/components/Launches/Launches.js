@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './launches.css'
 import LaunchCard from './LaunchCard'
-import MainLaunchCard from './MainLaunchCard'
+import MainLaunchCard from './Main Launch Card/MainLaunchCard'
 import KSCImg from '../../assets/imgs/google-imgs/KSC.png'
 import KOAImg from '../../assets/imgs/google-imgs/KOA.png'
 import ManateeImg from '../../assets/imgs/google-imgs/Manatee.png'
@@ -46,16 +46,16 @@ export default class Launches extends Component {
 
     countDownClock = () =>{
         
-        let today = Number(Date.now().toString().split('').splice(0,10).join(''))
-        let secondsRemaining =this.state.launches[0].netstamp - today
-        let minutesRemaining =Math.floor((this.state.launches[0].netstamp/60) - (today/60))
-        let hoursRemaining =Math.floor(minutesRemaining/60)
-        let daysRemaining =Math.floor(hoursRemaining/24)
-        this.setState({
-        secondsRemaining:secondsRemaining,
-        minutesRemaining:minutesRemaining,
-        hoursRemaining:hoursRemaining,
-        daysRemaining:daysRemaining})
+        // let today = Number(Date.now().toString().split('').splice(0,10).join(''))
+        // let secondsRemaining =this.state.launches[0].netstamp - today
+        // let minutesRemaining =Math.floor((this.state.launches[0].netstamp/60) - (today/60))
+        // let hoursRemaining =Math.floor(minutesRemaining/60)
+        // let daysRemaining =Math.floor(hoursRemaining/24)
+        // this.setState({
+        // secondsRemaining:secondsRemaining,
+        // minutesRemaining:minutesRemaining,
+        // hoursRemaining:hoursRemaining,
+        // daysRemaining:daysRemaining})
     }
     
     addCampsite = () =>{
@@ -143,7 +143,7 @@ async updateData(){
     
 
     render() {
-        console.log(this.state.launches[0])
+        console.log(this.state.launches)
        const launchCard = this.state.launches.map(launch=>{
            if(this.state.launches[0].id===launch.id){
             return <MainLaunchCard
@@ -156,14 +156,14 @@ async updateData(){
             img={launch.rocket.imageURL}
             date={launch.net}
             location={launch.location.pads[0].name}
-            description={launch.missions[0].description}
+            description={launch.missions===undefined?launch.missions[0].description:'No Info'}
             status={launch.status===1?`Green`:`Red`}
             campsite={launch.campsite} 
             campsiteImg={launch.campsiteImg}
-            seconds={this.state.secondsRemaining}
-            minutes={this.state.minutesRemaining}
-            hours={this.state.hoursRemaining}
-            days={this.state.daysRemaining}
+            // seconds={this.state.secondsRemaining}
+            // minutes={this.state.minutesRemaining}
+            // hours={this.state.hoursRemaining}
+            // days={this.state.daysRemaining}
             >
                 
             </MainLaunchCard>

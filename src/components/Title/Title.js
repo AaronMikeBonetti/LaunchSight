@@ -42,7 +42,7 @@ export default class Title extends Component {
     }
     render() {
         return (
-            <div className='title__container'>
+            <div id='title' className='title__container'>
                 <div className='clouds__img__right'/>
                 <div className='clouds__img__left'/>
                 <div className={this.state.isFaded?'title__jumbotron__container fade_out':'title__jumbotron__container fade_in'}>

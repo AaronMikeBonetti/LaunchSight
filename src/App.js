@@ -7,17 +7,20 @@ import Loader from './components/Loader/Loader'
 import Navbar from './components/Navbar/Navbar'
 import Title from './components/Title/Title';
 import Launches from './components/Launches/Launches';
+import GoogleApiWrapper from './components/Map/Map'
 
 
 function App(){
-  
   return (
     
     <div>
+      
       <Loader/>
       <Navbar/>
       <Title/>
       <Launches/>
+      <GoogleApiWrapper/>
+      
     </div>
     
   )

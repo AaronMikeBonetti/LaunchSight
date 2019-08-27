@@ -1,7 +1,7 @@
 import React from 'react'
 import "./launch_card.css"
 
-export default function LaunchCardFront(props){
+export default function LaunchCard(props){
     return (
         <div onClick={()=>{props.flipCard(props.value)}} className='launch__card__container'>
             <div className={props.frontCardClass}>

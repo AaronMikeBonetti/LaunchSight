@@ -70,7 +70,7 @@ html {
   grid-column: 2/-1;
   height: 100%;
   width: 100%;
-  background: url("../../assets/imgs/launches-imgs/spaceship-hud2.png");
+  background: url("../../../assets/imgs/launches-imgs/spaceship-hud2.png");
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-filter: brightness(0.2);
