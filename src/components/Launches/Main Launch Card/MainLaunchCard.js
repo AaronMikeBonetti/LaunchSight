@@ -16,7 +16,6 @@ export default function LaunchCardFront(props){
                 <h2 className='launch__location__front'>{props.location}</h2>
                 <h2 className='launch__date__front'>{props.date}</h2>
                 <h2 className='launch__button'>Learn More <i className='fas fa-arrow-right'></i></h2>
-                <h2 className='launch__countdown'><span>Days:</span> {props.days} <span>Hours: </span>{props.hours} <span>Minutes:</span> {props.minutes} <span>Seconds: </span>{props.seconds}</h2>
             </div>
             
             </div>
@@ -28,11 +27,11 @@ export default function LaunchCardFront(props){
             <li className='launch__mission-description__back'><span>Description: </span> {props.description}</li>
             <li className='launch__mission-status__back'><span>Status: </span> {props.status}</li>
             <li className='launch__date__back'><span>Launch Date: </span>{props.date}</li>
-            <li className='launch__campsite-name__back'><span>Closest Campsite</span> {props.campsite}</li>
+            <li className='launch__campsite-name__back'><span>Closest Campsite:</span> {props.campsite}</li>
             
             </ul>
             <div className='launch__campsite-info__back'>
-            <h2 className='launch__campsite-name__back'><span>{props.campsite}</span></h2>
+            <h2 className='launch__campsite-name__back'>{props.campsite}</h2>
             <img className='launch__campsite-img__back' src={props.campsiteImg}  alt={props.campsite}/>
             </div>
            

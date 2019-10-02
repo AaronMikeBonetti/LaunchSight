@@ -1,0 +1,53 @@
+.campsites__container{
+    background: linear-gradient(rgba(0, 0, 0, 0.60),rgba(0, 0, 0, 0.849)), url('../../assets/imgs/space-background.jpg');
+    display: grid;
+    height: 100%;
+    grid-template-rows: 200px 1fr 1fr 1fr;
+    grid-template-columns: 5% 1fr 1fr 5%;
+    gap: 20px;
+    
+
+    h1{
+        grid-column: 1/-1;
+        grid-row: 1;
+        width: 50%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .Jetty{
+        background:url('../../assets/imgs/campsite-imgs/Jetty_Park_img1.jpg');
+        grid-column: 2;
+        grid-row: 2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        
+        
+    }
+    .KOA{
+        background:url('../../assets/imgs/campsite-imgs/koa_img.imagecache.jpg');
+        grid-column: 3;
+        grid-row: 2;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        
+    }
+    .Manatee{
+        background:url('../../assets/imgs/campsite-imgs/manatee_img.jpg');
+        grid-column: 2;
+        grid-row: 3;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .KSC{
+        background:url('../../assets/imgs/campsite-imgs/KSC_img.jpg');
+        grid-column: 3;
+        grid-row: 3;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}

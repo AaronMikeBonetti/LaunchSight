@@ -7,12 +7,25 @@ html {
   scroll-behavior: smooth;
 }
 
+html .component__header {
+  font-size: 3vw;
+  text-align: center;
+  font-family: "Orbitron";
+  letter-spacing: 10px;
+  padding: 50px 0px 20px 0px;
+  color: #f6ca8f;
+  -webkit-animation: flicker 2s;
+          animation: flicker 2s;
+  text-shadow: 0px 0px 5px #8d8d8d;
+}
+
 .launch__card__container {
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0);
-  text-shadow: 0px 0px 5px white;
+  text-shadow: 0px 0px 2px white;
   font-family: "Orbitron";
+  font-weight: 100;
 }
 
 .launch__card__container .main__launch__card__front {
@@ -70,7 +83,7 @@ html {
   grid-column: 2/-1;
   height: 100%;
   width: 100%;
-  background: url("../../../assets/imgs/launches-imgs/spaceship-hud2.png");
+  background: url("../../../assets/imgs/launches-imgs/spaceship-hud1.png");
   background-size: cover;
   background-repeat: no-repeat;
   -webkit-filter: brightness(0.2);
@@ -127,13 +140,16 @@ html {
   font-size: 3vw;
   padding: 5px;
   padding-top: 60px;
-  text-shadow: 0px 0px 5px white;
+  text-shadow: 0px 0px 5px lightgray;
 }
 
 .launch__card__container .main__launch__card__front .launch__details__front .launch__location__front {
   -ms-grid-row: 3;
-  grid-row: 3;
+  -ms-grid-row-span: 5;
+  grid-row: 3/8;
   grid-column: 2/-1;
+  height: 50%;
+  margin: auto;
   position: relative;
   font-size: 1.5vw;
 }
@@ -151,8 +167,8 @@ html {
   position: relative;
   z-index: 1;
   grid-column: 2/-1;
-  -ms-grid-row: 6;
-  grid-row: 6;
+  -ms-grid-row: 8;
+  grid-row: 8;
   width: 100%;
   margin: 0px auto;
   text-align: center;
@@ -167,40 +183,23 @@ html {
   text-decoration: underline;
 }
 
-.launch__card__container .main__launch__card__front .launch__details__front .launch__countdown {
-  position: relative;
-  z-index: 1;
-  grid-column: 2/-1;
-  -ms-grid-row: 8;
-  grid-row: 8;
-  width: 100%;
-  height: 100%;
-  padding-top: 25px;
-  font-size: 1vw;
-}
-
-.launch__card__container .main__launch__card__front .launch__details__front .launch__countdown span {
-  color: #f6ca8f;
-}
-
 .launch__card__container .main__launch__card__back {
   position: relative;
   z-index: 0;
   height: 100%;
   width: 100%;
-  -ms-grid-columns: 5%  1fr 5%;
-      grid-template-columns: 5%  1fr 5%;
-  -ms-grid-rows: 5% 1fr 5% 1fr 5%;
-      grid-template-rows: 5% 1fr 5% 1fr 5%;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 10% 1fr;
+      grid-template-rows: 10% 1fr;
   background: rgba(0, 0, 0, 0.37);
   opacity: 1;
-  text-shadow: 0px 0px 5px white;
+  text-shadow: 0px 0px 5px lightgray;
   cursor: pointer;
 }
 
 .launch__card__container .main__launch__card__back .launch__header {
-  -ms-grid-column: 2;
-  grid-column: 2;
+  grid-column: 1/-1;
   -ms-grid-row: 1;
   grid-row: 1;
   -webkit-animation: flicker 2s;
@@ -208,32 +207,38 @@ html {
 }
 
 .launch__card__container .main__launch__card__back .launch__details__back {
-  -ms-grid-column: 2;
-  grid-column: 2;
+  -ms-grid-column: 1;
+  grid-column: 1;
   -ms-grid-row: 2;
   grid-row: 2;
-  list-style: none;
   -webkit-animation: flicker 2s;
           animation: flicker 2s;
-  padding: 40px;
   letter-spacing: 2px;
+  height: 60%;
+  width: 60%;
+  margin: auto;
 }
 
 .launch__card__container .main__launch__card__back .launch__details__back span {
   color: #f6ca8f;
 }
 
+.launch__card__container .main__launch__card__back .launch__details__back li {
+  padding: 6px;
+}
+
 .launch__card__container .main__launch__card__back .launch__campsite-info__back {
   text-align: center;
   -ms-grid-column: 2;
   grid-column: 2;
-  -ms-grid-row: 4;
-  -ms-grid-row-span: 1;
-  grid-row: 4/5;
+  -ms-grid-row: 2;
+  grid-row: 2;
 }
 
 .launch__card__container .main__launch__card__back .launch__campsite-info__back .launch__campsite-name__back {
   padding: 10px;
+  -webkit-animation: flicker 2s;
+          animation: flicker 2s;
 }
 
 .launch__card__container .main__launch__card__back .launch__campsite-info__back .launch__campsite-img__back {
@@ -295,102 +300,102 @@ html {
 @-webkit-keyframes flicker {
   0% {
     opacity: 0.1;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   2% {
     opacity: 0.3;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   8% {
     opacity: 0;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   9% {
     opacity: 1;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   12% {
     opacity: 0.1;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   20% {
     opacity: 0.6;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   25% {
     opacity: 0;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   30% {
     opacity: .2;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   70% {
     opacity: 0.7;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   72% {
     opacity: 0.2;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   77% {
     opacity: .5;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   100% {
     opacity: 1;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
 }
 
 @keyframes flicker {
   0% {
     opacity: 0.1;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   2% {
     opacity: 0.3;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   8% {
     opacity: 0;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   9% {
     opacity: 1;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   12% {
     opacity: 0.1;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   20% {
     opacity: 0.6;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   25% {
     opacity: 0;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   30% {
     opacity: .2;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   70% {
     opacity: 0.7;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   72% {
     opacity: 0.2;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   77% {
     opacity: .5;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
   100% {
     opacity: 1;
-    text-shadow: 0px 0px 5px white;
+    text-shadow: 0px 0px 5px lightgray;
   }
 }
 /*# sourceMappingURL=main_launch_card.css.map */

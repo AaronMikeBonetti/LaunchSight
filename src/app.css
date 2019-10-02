@@ -6,4 +6,16 @@ html {
   margin: 0;
   scroll-behavior: smooth;
 }
+
+html .component__header {
+  font-size: 3vw;
+  text-align: center;
+  font-family: "Orbitron";
+  letter-spacing: 10px;
+  padding: 50px 0px 20px 0px;
+  color: #f6ca8f;
+  -webkit-animation: flicker 2s;
+          animation: flicker 2s;
+  text-shadow: 0px 0px 5px #8d8d8d;
+}
 /*# sourceMappingURL=app.css.map */

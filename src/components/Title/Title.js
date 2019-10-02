@@ -45,6 +45,7 @@ export default class Title extends Component {
             <div id='title' className='title__container'>
                 <div className='clouds__img__right'/>
                 <div className='clouds__img__left'/>
+                <div className='box'/>
                 <div className={this.state.isFaded?'title__jumbotron__container fade_out':'title__jumbotron__container fade_in'}>
                     
                     <h1 className='title__jumbotron__header'>Launch-Sight</h1>

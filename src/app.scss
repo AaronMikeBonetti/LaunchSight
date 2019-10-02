@@ -11,5 +11,15 @@ html{
     padding: 0;
     margin: 0;
     scroll-behavior: smooth;
+
+    .component__header{
+        font-size: 3vw;
+            text-align: center;
+            font-family: "Orbitron";
+            letter-spacing:10px;
+            padding: 50px 0px 20px 0px; color: rgb(246, 202, 143);
+            animation: flicker 2s;
+            text-shadow: 0px 0px 5px rgb(141, 141, 141);
+    }
     
 }

@@ -7,21 +7,33 @@ html {
   scroll-behavior: smooth;
 }
 
+html .component__header {
+  font-size: 3vw;
+  text-align: center;
+  font-family: "Orbitron";
+  letter-spacing: 10px;
+  padding: 50px 0px 20px 0px;
+  color: #f6ca8f;
+  -webkit-animation: flicker 2s;
+          animation: flicker 2s;
+  text-shadow: 0px 0px 5px #8d8d8d;
+}
+
 .title__container {
   position: relative;
   z-index: -1;
-  height: 110vh;
+  height: 100vh;
   width: 100%;
-  background: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0)), color-stop(29%, rgba(0, 0, 0, 0)), color-stop(49%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.55))), url("../../assets/imgs/SpaceX-Launch.jpg") no-repeat;
-  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.3) 49%, rgba(0, 0, 0, 0.55) 100%), url("../../assets/imgs/SpaceX-Launch.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(0, 0, 0, 0)), color-stop(29%, rgba(0, 0, 0, 0)), color-stop(49%, rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.5))), url("../../assets/imgs/SpaceX-Launch.jpg") no-repeat;
+  background: linear-gradient(to bottom right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 29%, rgba(0, 0, 0, 0.3) 49%, rgba(0, 0, 0, 0.5) 100%), url("../../assets/imgs/SpaceX-Launch.jpg") no-repeat;
   background-position: center;
   background-size: cover;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 40% 1fr 5%;
-      grid-template-columns: 40% 1fr 5%;
-  -ms-grid-rows: 40% 1fr 10%;
-      grid-template-rows: 40% 1fr 10%;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
   -webkit-filter: brightness(130%);
           filter: brightness(130%);
 }
@@ -59,17 +71,23 @@ html {
 .title__container .title__jumbotron__container {
   -ms-grid-column: 2;
   grid-column: 2;
-  grid-row: 2/-1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  height: 100%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 10% 20% 60% 10%;
       grid-template-columns: 10% 20% 60% 10%;
-  -ms-grid-rows: 1fr 20px 1fr 1fr;
-      grid-template-rows: 1fr 20px 1fr 1fr;
+  -ms-grid-rows: 0.3fr 0.8fr 20px 0.5fr 2fr;
+      grid-template-rows: 0.3fr 0.8fr 20px 0.5fr 2fr;
   position: fixed;
-  padding: 2vw;
-  color: white;
+  border-top: 230px solid rgba(226, 226, 226, 0.23);
+  color: rgba(231, 231, 231, 0.726);
   font-weight: 100;
+  background: rgba(0, 0, 0, 0.301);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  text-align: center;
 }
 
 .title__container .title__jumbotron__container .fade_out {
@@ -119,13 +137,13 @@ html {
 
 .title__container .title__jumbotron__container .title__jumbotron__header {
   grid-column: 1/-1;
-  -ms-grid-row: 1;
-  grid-row: 1;
+  -ms-grid-row: 2;
+  grid-row: 2;
   position: relative;
   z-index: 2;
   text-align: left;
   margin: auto 0;
-  font-size: 3vw;
+  font-size: 2vw;
   font-family: "Orbitron";
   letter-spacing: 10px;
   padding-left: 5.5vw;
@@ -138,8 +156,8 @@ html {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-column: 2/4;
-  -ms-grid-row: 2;
-  grid-row: 2;
+  -ms-grid-row: 3;
+  grid-row: 3;
   display: block;
   position: relative;
   top: 0;
@@ -156,9 +174,9 @@ html {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-column: 2/4;
-  -ms-grid-row: 3;
-  grid-row: 3;
-  font-size: 1.3vw;
+  -ms-grid-row: 4;
+  grid-row: 4;
+  font-size: 1vw;
   letter-spacing: 2px;
   margin: auto;
 }
@@ -167,8 +185,8 @@ html {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-column: 2/4;
-  -ms-grid-row: 4;
-  grid-row: 4;
+  -ms-grid-row: 5;
+  grid-row: 5;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,13 +197,13 @@ html {
   position: relative;
   z-index: 2;
   list-style: none;
-  font-size: 2vw;
+  font-size: 1vw;
   padding-top: 20px;
   color: white;
 }
 
 .title__container .title__jumbotron__container .title__jumbotron__icons i {
-  border: 0.2vw solid rgba(255, 255, 255, 0.157);
+  border: 0.1vw solid rgba(255, 255, 255, 0.157);
   padding: 1vw;
   border-radius: 50%;
 }
@@ -198,14 +216,14 @@ html {
 
 @keyframes fadeOut {
   0% {
-    margin-top: 0;
+    margin-left: 0;
     opacity: 1;
   }
   60% {
     opacity: 0;
   }
   100% {
-    margin-top: 200px;
+    margin-left: 200px;
     opacity: 0;
   }
 }
@@ -218,28 +236,28 @@ html {
 
 @-webkit-keyframes fadeIn {
   0% {
-    margin-top: 200px;
+    margin-left: 200px;
+    overflow: hidden !important;
     opacity: 0;
   }
   60% {
     opacity: 0;
   }
   100% {
-    margin-top: 0px;
     opacity: 1;
   }
 }
 
 @keyframes fadeIn {
   0% {
-    margin-top: 200px;
+    margin-left: 200px;
+    overflow: hidden !important;
     opacity: 0;
   }
   60% {
     opacity: 0;
   }
   100% {
-    margin-top: 0px;
     opacity: 1;
   }
 }

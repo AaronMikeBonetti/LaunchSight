@@ -1,0 +1,69 @@
+html {
+  font-family: "Orbitron";
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html .component__header {
+  font-size: 3vw;
+  text-align: center;
+  font-family: "Orbitron";
+  letter-spacing: 10px;
+  padding: 50px 0px 20px 0px;
+  color: #f6ca8f;
+  -webkit-animation: flicker 2s;
+          animation: flicker 2s;
+  text-shadow: 0px 0px 5px #8d8d8d;
+}
+
+.campsite__container {
+  height: 600px;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 5% 1fr 5%;
+      grid-template-columns: 5% 1fr 5%;
+  -ms-grid-rows: 2fr 1fr;
+      grid-template-rows: 2fr 1fr;
+}
+
+.campsite__container .campsite__name {
+  padding-top: 20px;
+  height: 100%;
+  width: 100%;
+  font-size: 2.5vw;
+  color: white;
+  background: rgba(0, 0, 0, 0.36);
+}
+
+.campsite__container .campsite__details__container {
+  grid-column: 1/-1;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  background: rgba(0, 0, 0, 0.76);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  color: #f6ca8f;
+  border-top-left-radius: 5%;
+  border-top-right-radius: 5%;
+}
+
+.campsite__container .campsite__details__container h2 {
+  text-align: center;
+  font-size: 1.5vw;
+  padding: 20px;
+}
+
+.campsite__container .campsite__details__container a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  margin: 20px auto 0 auto;
+  font-size: 1.5vw;
+}
+/*# sourceMappingURL=campsite.css.map */

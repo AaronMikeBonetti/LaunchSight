@@ -8,6 +8,7 @@ import Navbar from './components/Navbar/Navbar'
 import Title from './components/Title/Title';
 import Launches from './components/Launches/Launches';
 import GoogleApiWrapper from './components/Map/Map'
+import Campsites from './components/Campsites/Campsites'
 
 
 function App(){
@@ -20,6 +21,7 @@ function App(){
       <Title/>
       <Launches/>
       <GoogleApiWrapper/>
+      <Campsites/>
       
     </div>
     

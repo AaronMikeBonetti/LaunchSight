@@ -44,19 +44,6 @@ export default class Launches extends Component {
         
     }
 
-    countDownClock = () =>{
-        
-        // let today = Number(Date.now().toString().split('').splice(0,10).join(''))
-        // let secondsRemaining =this.state.launches[0].netstamp - today
-        // let minutesRemaining =Math.floor((this.state.launches[0].netstamp/60) - (today/60))
-        // let hoursRemaining =Math.floor(minutesRemaining/60)
-        // let daysRemaining =Math.floor(hoursRemaining/24)
-        // this.setState({
-        // secondsRemaining:secondsRemaining,
-        // minutesRemaining:minutesRemaining,
-        // hoursRemaining:hoursRemaining,
-        // daysRemaining:daysRemaining})
-    }
     
     addCampsite = () =>{
         
@@ -90,8 +77,7 @@ export default class Launches extends Component {
             let response = await fetch(this.state.launchesURL)
             let data = await response.json()
         
-            await this.setState({
-            //I filtered out all the launches that were not at Cape Canaveral and limited the results to 7
+            this.setState({
                 launches: data.launches.filter(launch=>{
                     let launches = []
                     if(launch.location.id===16||launch.location.id===18){
@@ -126,12 +112,8 @@ flipCard = (launch) =>{
 
 async updateData(){
     await this.fetchLaunches()
-    await this.addActiveState()
-    await this.addCampsite()
-    await this.countDownClock()
-    // await setInterval(() => {
-    //     this.countDownClock()
-    //   }, 1000);
+     this.addActiveState()
+     this.addCampsite()
 }
 
     componentDidMount(){
@@ -143,7 +125,7 @@ async updateData(){
     
 
     render() {
-        console.log(this.state.launches)
+        
        const launchCard = this.state.launches.map(launch=>{
            if(this.state.launches[0].id===launch.id){
             return <MainLaunchCard
@@ -160,13 +142,10 @@ async updateData(){
             status={launch.status===1?`Green`:`Red`}
             campsite={launch.campsite} 
             campsiteImg={launch.campsiteImg}
-            // seconds={this.state.secondsRemaining}
-            // minutes={this.state.minutesRemaining}
-            // hours={this.state.hoursRemaining}
-            // days={this.state.daysRemaining}
-            >
+            
+            />
                 
-            </MainLaunchCard>
+            
            }
            else{
             return <LaunchCard
@@ -194,10 +173,10 @@ async updateData(){
     
     
         return(
-            <div className='launches__container'>
+            <div className='launches__container' id='launches'>
                 
                 <div className='launches__header__container'>
-                    <h1>Launches</h1>
+                    <h1 className='component__header'>Launches</h1>
                     <p>This site will give you the run down on what's going up, when its going and where the best places to catch a glimpse are.</p>
                     
                 </div>

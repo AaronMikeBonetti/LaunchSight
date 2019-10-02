@@ -2,6 +2,9 @@
 .launch__card__container{
     height: 100%;
     width: 100%;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    
 
     .launch__header{
         position: relative;
@@ -11,17 +14,13 @@
         text-align: center;
         font-size: 1.5vw;
         padding: 10px;
-        text-shadow: none;
         animation: flicker 2s;
-        
-
     }
     .launch__card__front:nth-child(0){
         position: relative;
         z-index: 1;
         grid-template-columns: 1fr;
-        grid-template-rows: 10% 50% 30% 10%;
-        cursor: pointer;
+        grid-template-rows: 10% 50% 30% 10%; 
     }
 
     .launch__card__front{
@@ -29,13 +28,8 @@
         z-index: 1;
         grid-template-columns: 10% 1fr 10%;
         grid-template-rows: 10% 50% 30% 10%;
-        cursor: pointer;
 
         
-        
-        .launch__header{
-            text-shadow:none;
-        }
         
         
 
@@ -46,7 +40,7 @@
         height: 100%;
         grid-column: 1/-1;
         grid-row: 1/-1;
-        filter: brightness(0.4);
+        filter: brightness(0.8);
         transition: all 0.5s;
         
     }
@@ -57,13 +51,18 @@
         z-index: 2;
         grid-column: 1/-1;
         grid-row: 3/-1;
-        background: rgba(69, 75, 82, 0.26);
+        background: rgba(0, 0, 0, 0.548);
+        backdrop-filter: blur(4px);
         height: 100%;
         margin: auto;
         text-shadow: none;
         animation: none;
         padding: 10px;
         text-align: center;
+        text-shadow: 0px 0px 5px rgb(211, 211, 211);
+        animation: flicker 2s;
+        border-top-left-radius: 5%;
+        border-top-right-radius: 5%;
         
         
     
@@ -85,8 +84,9 @@
         text-align: center;
         font-size: 0.8vw;
         color: rgb(246, 202, 143);
+        text-shadow: 0px 0px 5px rgb(141, 141, 141);
         transition: color 2s;
-        text-shadow: none;
+        
         
     }
     .launch__button:hover,
@@ -102,22 +102,28 @@
     height: 100%;
     width: 100%;
     grid-template-columns: 5% 1fr 5%;
-    grid-template-rows: 20% 1fr 50% 5%;
+    grid-template-rows: 15% 1fr 2fr 5%;
     background:rgba(0, 0, 0, 0.198);
     text-align: left;
     
     
     .launch__header{
-        text-shadow: 0px 0px 5px rgb(255, 255, 255);
+        text-shadow: 0px 0px 5px rgb(211, 211, 211);
     }
     
     .launch__details__back{
         grid-column: 2;
         grid-row: 2;
-        list-style: none;
-        
+        margin-left: 15px;
+        text-shadow: 0px 0px 5px rgb(211, 211, 211);
+        animation: flicker 2s;
         span{
-            color:$primary-dark
+            color:$primary-dark;
+
+        }
+        li{
+            padding:3px;
+            
         }
         .launch__location__back,
         .launch__date__back,
@@ -132,8 +138,7 @@
             background-size: cover;
             height: 100%;
             width: 100%;
-            
-            
+               
         }
     }
 }
@@ -166,8 +171,3 @@
         opacity: 1;
     }
 }
-.launch__card__container:focus img,
-    .launch__card__container:hover img{
-        filter: brightness(1);
-
-    }

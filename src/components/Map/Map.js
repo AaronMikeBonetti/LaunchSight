@@ -111,6 +111,7 @@ export class MapContainer extends Component {
       })
     }
   };
+  
 render() {
   
   let markers =  this.state.locations.map(location=>{ 
@@ -127,13 +128,14 @@ render() {
 })
 
 let mapStyles = {
-  width: '80%',
-  height: '80%',
-  margin: 'auto'
+  width: '70vw',
+  height: '600px',
+  margin: '50px auto 0px auto',
 }
 
   return (
-    <div className='map__container'>
+    <div className='map__container' id='map'>
+      <h1 className='component__header'>Map</h1>
       <Map google={this.props.google} 
     initialCenter={{
       lat: 28.556522,
@@ -152,7 +154,9 @@ let mapStyles = {
               <a href={this.state.selectedPlace.link}>Get Directions</a>
             </div>
         </InfoWindow>
-  </Map></div>
+  </Map>
+  
+  </div>
     
  );
  }

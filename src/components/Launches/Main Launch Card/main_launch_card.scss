@@ -1,11 +1,13 @@
-@import "../../app.scss";
+@import '../../../app.scss';
 .launch__card__container{
     height: 100%;
     width: 100%;
     background: rgba(0, 0, 0, 0);
-    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+    text-shadow: 0px 0px 2px rgb(255, 255, 255);
     font-family: "Orbitron";
+    font-weight: 100;
 
+    
     .main__launch__card__front{
         position: relative;
         z-index: 1;
@@ -92,12 +94,14 @@
             font-size: 3vw;
             padding: 5px;
             padding-top: 60px;
-            text-shadow: 0px 0px 5px rgb(255, 255, 255);
+            text-shadow: 0px 0px 5px rgb(211, 211, 211);
         }
         
         .launch__location__front{
-        grid-row: 3;
+        grid-row: 3/8;
         grid-column: 2/-1;
+        height: 50%;
+        margin: auto;
         position: relative;
         font-size: 1.5vw;
         
@@ -108,13 +112,14 @@
         padding-top: 5px;
         font-size: 1vw;
         color: $primary-dark;
+        
 
         }
         .launch__button{
             position: relative;
             z-index: 1;
             grid-column: 2/-1;
-            grid-row: 6;
+            grid-row: 8;
             width: 100%;
             margin: 0px auto;
             text-align: center;
@@ -127,21 +132,7 @@
         .launch__button:focus{
             text-decoration: underline;
         }
-        .launch__countdown{
-          position: relative;
-          z-index: 1;
-          grid-column: 2/-1;
-          grid-row: 8;
-          width: 100%;
-          height: 100%;
-          padding-top: 25px;
-          font-size: 1vw;
-          span{
-            color: $primary-dark;
-          }
-        }
-        
-        
+    
     }
     
 
@@ -152,29 +143,35 @@
     z-index: 0;
     height: 100%;
     width: 100%;
-    grid-template-columns: 5%  1fr 5%;
-    grid-template-rows: 5% 1fr 5% 1fr 5%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10% 1fr ;
     background:rgba(0, 0, 0, 0.37);
     opacity: 1;
-    text-shadow: 0px 0px 5px rgb(255, 255, 255);
+    text-shadow: 0px 0px 5px rgb(211, 211, 211);
     cursor: pointer;
     
     
     .launch__header{
-      grid-column: 2;
+      grid-column: 1/-1;
       grid-row: 1;
       animation: flicker 2s;
     }
 
     .launch__details__back{
-        grid-column: 2;
+        grid-column: 1;
         grid-row: 2;
-        list-style: none;
+        
         animation: flicker 2s;
-        padding: 40px;
         letter-spacing: 2px;
+        height: 60%;
+        width: 60%;
+        margin: auto;
         span{
             color:$primary-dark
+        }
+
+        li{
+          padding: 6px;
         }
         
           
@@ -182,11 +179,12 @@
         .launch__campsite-info__back{
           text-align: center;
           grid-column: 2;
-          grid-row: 4/5;
+          grid-row: 2;
           
 
           .launch__campsite-name__back{
             padding: 10px;
+            animation: flicker 2s;
           }
           .launch__campsite-img__back{
             background-size: contain;
@@ -231,54 +229,54 @@
 @keyframes flicker {
     0% {
       opacity:0.1;
-      text-shadow: 0px 0px 5px rgb(255, 255, 255);
+      text-shadow: 0px 0px 5px rgb(211, 211, 211);
     }
     
     2% {
       opacity:0.3;
-      text-shadow: 0px 0px 5px rgb(255, 255, 255);
+      text-shadow: 0px 0px 5px rgb(211, 211, 211);
     }
     8% {
       opacity:0;
-      text-shadow: 0px 0px 5px rgb(255, 255, 255);
+      text-shadow: 0px 0px 5px rgb(211, 211, 211);
     }
     9% {
       opacity:1;
-      text-shadow: 0px 0px 5px rgb(255, 255, 255);
+      text-shadow: 0px 0px 5px rgb(211, 211, 211);
     }
     12% {
       opacity:0.1;
-      text-shadow: 0px 0px 5px rgb(255, 255, 255);
+      text-shadow: 0px 0px 5px rgb(211, 211, 211);
     }
     20% {
       opacity:0.6;
-      text-shadow: 0px 0px 5px rgb(255, 255, 255)
+      text-shadow: 0px 0px 5px rgb(211, 211, 211);
     }
     25% {
       opacity:0;
-      text-shadow: 0px 0px 5px rgb(255, 255, 255)
+      text-shadow: 0px 0px 5px rgb(211, 211, 211);
     }
     30% {
       opacity:.2;
-      text-shadow: 0px 0px 5px rgb(255, 255, 255)
+      text-shadow: 0px 0px 5px rgb(211, 211, 211);
     }
     
     70% {
       opacity:0.7;
-      text-shadow: 0px 0px 5px rgb(255, 255, 255)
+      text-shadow: 0px 0px 5px rgb(211, 211, 211);
     }
     
     72% {
       opacity:0.2;
-      text-shadow:0px 0px 5px rgb(255, 255, 255)
+      text-shadow: 0px 0px 5px rgb(211, 211, 211);
     }
     
     77% {
       opacity:.5;
-      text-shadow: 0px 0px 5px rgb(255, 255, 255)
+      text-shadow: 0px 0px 5px rgb(211, 211, 211);
     }
     100% {
       opacity:1;
-      text-shadow: 0px 0px 5px rgb(255, 255, 255)
+      text-shadow: 0px 0px 5px rgb(211, 211, 211);
     }
   }
