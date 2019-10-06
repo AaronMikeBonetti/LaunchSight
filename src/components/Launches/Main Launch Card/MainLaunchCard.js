@@ -7,11 +7,11 @@ export default function LaunchCardFront(props){
             <div className={props.frontCardClass}>
             <img className='launch__img' src={props.img} alt={props.name}/>
             <div className='launch__details__front'>
-            <div className='launch__card__circle'></div>
-            <div className='launch__card__corner__tl'></div>
-            <div className='launch__card__corner__tr'></div>
-            <div className='launch__card__corner__bl'></div>
-            <div className='launch__card__corner__br'></div>
+            <div className='launch__card__background__front'></div>
+            <div className='launch__card__corner__tl__front'></div>
+            <div className='launch__card__corner__tr__front'></div>
+            <div className='launch__card__corner__bl__front'></div>
+            <div className='launch__card__corner__br__front'></div>
             <h1 className='launch__header'>+ {props.name} +</h1>
                 <h2 className='launch__location__front'>{props.location}</h2>
                 <h2 className='launch__date__front'>{props.date}</h2>
@@ -21,6 +21,11 @@ export default function LaunchCardFront(props){
             </div>
             <div className={props.backCardClass}>
             <h1 className='launch__header'>{props.name}</h1>
+            <div className='launch__card__background__back'></div>
+            <div className='launch__card__corner__tl__back'></div>
+            <div className='launch__card__corner__tr__back'></div>
+            <div className='launch__card__corner__bl__back'></div>
+            <div className='launch__card__corner__br__back'></div>
             <ul className='launch__details__back'>
             
             <li className='launch__location__back'><span>Location: </span> {props.location}</li>

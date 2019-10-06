@@ -177,7 +177,7 @@ async updateData(){
                 
                 <div className='launches__header__container'>
                     <h1 className='component__header'>Launches</h1>
-                    <p>This site will give you the run down on what's going up, when its going and where the best places to catch a glimpse are.</p>
+                    
                     
                 </div>
                 
