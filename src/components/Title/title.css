@@ -39,7 +39,7 @@ html .component__header {
 }
 
 .title__container .clouds__img__right {
-  background: url("../../assets/imgs/clouds-right.png");
+  background: url("../../assets/imgs/clouds-right.webp");
   -webkit-filter: blur(3px) brightness(50%);
           filter: blur(3px) brightness(50%);
   background-repeat: no-repeat;
@@ -54,7 +54,7 @@ html .component__header {
 }
 
 .title__container .clouds__img__left {
-  background: url("../../assets/imgs/clouds-left.png");
+  background: url("../../assets/imgs/clouds-left.webp");
   -webkit-filter: blur(4px) brightness(50%);
           filter: blur(4px) brightness(50%);
   background-repeat: no-repeat;

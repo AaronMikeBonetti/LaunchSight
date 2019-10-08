@@ -22,8 +22,7 @@ html .component__header {
 .loader__container {
   display: -ms-grid;
   display: grid;
-  display: none;
-  position: absolute;
+  position: fixed;
   z-index: 50;
   top: 0;
   width: 100%;
@@ -151,6 +150,6 @@ html .component__header {
 
 .loader__container .loader__globe__container .loader__globe .fa-globe-europe {
   font-size: 200px;
-  color: #6e5653;
+  color: #3c6ea8;
 }
 /*# sourceMappingURL=loader.css.map */

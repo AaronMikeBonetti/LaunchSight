@@ -4,14 +4,14 @@
   "private": true,
   "dependencies": {
     "google-maps-react": "^2.0.2",
-    "node-sass": "^4.10.0",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
+    "node-sass": "^4.12.0",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2",
     "react-google-maps": "^9.4.5",
     "react-redux": "^6.0.1",
     "react-scripts": "^2.1.8",
-    "react-scroll": "^1.7.13",
-    "redux": "^4.0.1"
+    "react-scroll": "^1.7.14",
+    "redux": "^4.0.4"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -29,7 +29,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "css-loader": "^2.1.0",
+    "css-loader": "^2.1.1",
     "dotenv": "^8.1.0",
     "style-loader": "^0.23.1"
   }
