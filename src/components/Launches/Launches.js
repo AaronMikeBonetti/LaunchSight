@@ -71,6 +71,8 @@ export default class Launches extends Component {
        
         this.setState({launches})
     }
+
+    
     
     async fetchLaunches(){
         try {

@@ -1,5 +1,8 @@
 @import "../../app.scss";
-
+html, body {
+    overflow-y:hidden;
+    height:100%;
+  }
 
 .loader__container{
         display: grid;

@@ -29,6 +29,11 @@ export default class App extends Component{
    if(this.state.loaderActive===true){
  return <div>  
         <Loader/>
+        <Title/>
+        <Launches/>
+        <Launches/>
+        <GoogleApiWrapper/>
+        <Campsites/>
         </div>
    }
    else{
