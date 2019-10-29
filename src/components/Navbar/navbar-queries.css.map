@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EAC/B,AAAA,kBAAkB,CAAA;IACd,KAAK,EAAE,IAAI;GASd;EAVD,AAEI,kBAFc,CAEd,UAAU,CAAA;IACN,IAAI,EAAE,IAAI;IACV,SAAS,EAAE,IAAI;GAClB;EALL,AAMI,kBANc,CAMd,QAAQ,CAAA;IACJ,GAAG,EAAE,IAAI;IACT,IAAI,EAAE,GAAG;GACZ",
     "sources": [
         "navbar-queries.scss"
     ],

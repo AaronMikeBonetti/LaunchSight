@@ -17,9 +17,6 @@ export default class Navbar extends Component {
             topOfMap: document.getElementById('map'),
             topOfCampsites: document.getElementById('campsites')
         })
-        console.log(this.state)
-        
-        
     }
     componentDidMount(){
         setTimeout(this.getComponentHeights,1000)

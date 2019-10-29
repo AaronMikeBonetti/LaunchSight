@@ -40,15 +40,6 @@ html .component__header {
           animation: flicker 2s;
 }
 
-.launch__card__container .launch__card__front:nth-child(0) {
-  position: relative;
-  z-index: 1;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: 10% 50% 30% 10%;
-      grid-template-rows: 10% 50% 30% 10%;
-}
-
 .launch__card__container .launch__card__front {
   position: relative;
   z-index: 1;
@@ -80,6 +71,7 @@ html .component__header {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   height: 100%;
+  width: 100%;
   margin: auto;
   text-shadow: none;
   -webkit-animation: none;

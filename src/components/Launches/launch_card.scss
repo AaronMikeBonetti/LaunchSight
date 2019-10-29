@@ -16,12 +16,7 @@
         padding: 10px;
         animation: flicker 2s;
     }
-    .launch__card__front:nth-child(0){
-        position: relative;
-        z-index: 1;
-        grid-template-columns: 1fr;
-        grid-template-rows: 10% 50% 30% 10%; 
-    }
+    
 
     .launch__card__front{
         position: relative;
@@ -54,6 +49,7 @@
         background: rgba(0, 0, 0, 0.548);
         backdrop-filter: blur(4px);
         height: 100%;
+        width: 100%;
         margin: auto;
         text-shadow: none;
         animation: none;

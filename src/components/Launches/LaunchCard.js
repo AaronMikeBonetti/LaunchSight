@@ -1,5 +1,6 @@
 import React from 'react'
 import "./launch_card.css"
+import "./launch_card-queries.scss"
 
 export default function LaunchCard(props){
     return (

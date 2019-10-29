@@ -16,7 +16,6 @@ export default class Title extends Component {
             const background = document.querySelector('.title__container')
         
             let scrolled = window.pageYOffset
-            let windowWidth = window.innerWidth
             let rate1 = scrolled * - 1
             let rate2 = scrolled * - 1.5
             let rate3 = scrolled / 3

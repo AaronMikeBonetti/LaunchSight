@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Campsite from './Campsite/Campsite'
 import './campsites.css'
+import './campsites-queries.scss'
 
 export default class Campsites extends Component {
     constructor(){

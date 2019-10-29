@@ -1,5 +1,5 @@
 {
-  "name": "todolist-r",
+  "name": "launch-sight",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,11 +7,7 @@
     "node-sass": "^4.12.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
-    "react-google-maps": "^9.4.5",
-    "react-redux": "^6.0.1",
-    "react-scripts": "^2.1.8",
-    "react-scroll": "^1.7.14",
-    "redux": "^4.0.4"
+    "react-scripts": "^2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -30,7 +26,7 @@
   ],
   "devDependencies": {
     "css-loader": "^2.1.1",
-    "dotenv": "^8.1.0",
+    "dotenv": "^8.2.0",
     "style-loader": "^0.23.1"
   }
 }

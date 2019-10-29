@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import './launches.css'
+import './launches-queries.scss'
+
 import LaunchCard from './LaunchCard'
 import MainLaunchCard from './Main Launch Card/MainLaunchCard'
 import KSCImg from '../../assets/imgs/google-imgs/KSC.png'
@@ -179,8 +181,6 @@ async updateData(){
                 
                 <div className='launches__header__container'>
                     <h1 className='component__header'>Launches</h1>
-                    
-                    
                 </div>
                 
                 {launchCard}

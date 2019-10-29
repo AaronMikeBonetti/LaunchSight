@@ -1,5 +1,6 @@
 import React from 'react';
 import './campsite.css'
+import './campsite-queries.scss'
 
 const Campsite = (props) => {
     return (

@@ -1,4 +1,4 @@
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 800px) {
   .title__container {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -21,14 +21,14 @@
         grid-template-columns: 10% 1fr 10%;
     -ms-grid-rows: 1fr 0.3fr 40px 0.3fr  0.3fr 2fr;
         grid-template-rows: 1fr 0.3fr 40px 0.3fr  0.3fr 2fr;
-    -webkit-backdrop-filter: blur(2px);
-            backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(1px) brightness(0.8);
+            backdrop-filter: blur(1px) brightness(0.8);
     border-top: 0px;
   }
   .title__container .title__jumbotron__container .title__jumbotron__header {
     grid-column: 1/-1;
     text-align: center;
-    font-size: 5.5vw;
+    font-size: 3vw;
     padding-left: 0;
   }
   .title__container .title__jumbotron__container hr {
@@ -40,20 +40,20 @@
   .title__container .title__jumbotron__container .title__jumbotron__paragraph-1 {
     -ms-grid-column: 2;
     grid-column: 2;
-    font-size: 4vw;
+    font-size: 2vw;
     width: 70%;
-    color: rgba(255, 255, 255, 0.418);
+    color: rgba(255, 255, 255, 0.513);
   }
   .title__container .title__jumbotron__container .title__jumbotron__icons {
     -ms-grid-column: 2;
     grid-column: 2;
-    font-size: 3vw;
+    font-size: 2vw;
     width: 60%;
     margin: auto;
   }
   .title__container .title__jumbotron__container .title__jumbotron__icons i {
-    color: rgba(255, 255, 255, 0.431);
-    border: 0.3vw solid rgba(255, 255, 255, 0.157);
+    color: rgba(255, 255, 255, 0.531);
+    border: 0.1vw solid rgba(255, 255, 255, 0.257);
     padding: 2vw;
   }
 }

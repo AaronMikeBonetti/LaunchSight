@@ -20,7 +20,7 @@ html .component__header {
 }
 
 .campsite__container {
-  height: 600px;
+  height: 100%;
   width: 100%;
   display: -ms-grid;
   display: grid;

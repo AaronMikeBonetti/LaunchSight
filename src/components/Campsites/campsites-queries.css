@@ -1,0 +1,63 @@
+@media screen and (max-width: 700px) {
+  .campsites__container {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.849))), url("../../assets/imgs/space-background.jpg");
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.849)), url("../../assets/imgs/space-background.jpg");
+    display: -ms-grid;
+    display: grid;
+    height: 100%;
+    -ms-grid-rows: 200px 300px 300px 300px 300px 300px 100px;
+        grid-template-rows: 200px 300px 300px 300px 300px 300px 100px;
+    -ms-grid-columns: 5% 1fr 5%;
+        grid-template-columns: 5% 1fr 5%;
+    gap: 20px;
+  }
+  .campsites__container h1 {
+    grid-column: 1/-1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+  .campsites__container .Jetty {
+    background: url("../../assets/imgs/campsite-imgs/Jetty_Park_img1.jpg");
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .campsites__container .KOA {
+    background: url("../../assets/imgs/campsite-imgs/koa_img.imagecache.jpg");
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 3;
+    grid-row: 3;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .campsites__container .Manatee {
+    background: url("../../assets/imgs/campsite-imgs/manatee_img.jpg");
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 4;
+    grid-row: 4;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .campsites__container .KSC {
+    background: url("../../assets/imgs/campsite-imgs/KSC_img.jpg");
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 5;
+    grid-row: 5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+/*# sourceMappingURL=campsites-queries.css.map */

@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AACA,AAWQ,oBAXY,CAMhB,6BAA6B,CAKzB,EAAE,CAAA;EAEE,SAAS,EAAE,KAAK;EAChB,OAAO,EAAE,SAAS;CAErB;;AAhBT,AAiBQ,oBAjBY,CAMhB,6BAA6B,CAWzB,CAAC,CAAA;EACG,SAAS,EAAE,KAAK;CACnB",
+    "sources": [
+        "campsite-queries.scss"
+    ],
+    "names": [],
+    "file": "campsite-queries.css"
+}

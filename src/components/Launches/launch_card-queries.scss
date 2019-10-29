@@ -1,0 +1,92 @@
+@media screen and (max-width:1000px){
+
+.launch__card__container{
+    
+    
+    .launch__header{
+        font-size: 2.5vw;
+    }
+    
+    .launch__card__front{
+        
+    .launch__details__front{
+       
+        .launch__location__front{
+        font-size: 2vw;
+        }
+        .launch__date__front{
+        
+        font-size: 1.2vw;
+        }
+        
+    }
+    .launch__button{
+        font-size: 1.3vw;
+       
+    }
+    
+
+}
+
+    .launch__card__back{
+    
+    .launch__details__back{
+        
+        .launch__location__back,
+        .launch__date__back,
+        .launch__campsite__back{
+            font-size: 1.2vw;
+            }
+           
+        }
+        
+    }
+}
+
+}
+@media screen and (max-width:700px){
+
+.launch__card__container{
+    
+    
+    .launch__header{
+        font-size: 3vw;
+    }
+    
+    .launch__card__front{
+    
+    .launch__details__front{
+       
+        .launch__location__front{
+        font-size: 2.5vw;
+        }
+        .launch__date__front{
+        font-size: 2vw;
+        }
+        
+    }
+
+    .launch__button{
+        font-size: 2vw; 
+    }
+    
+
+}
+
+    .launch__card__back{
+
+    .launch__details__back{
+        
+        .launch__location__back,
+        .launch__date__back,
+        .launch__campsite__back{
+            font-size: 2vw;
+
+            }
+           
+        }
+        
+    }
+}
+
+}
