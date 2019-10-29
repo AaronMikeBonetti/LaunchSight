@@ -19,14 +19,15 @@
             width: 100%;
             grid-template-columns: 10% 1fr 10%;
             grid-template-rows:1fr 0.3fr 40px 0.3fr  0.3fr 2fr;
-            backdrop-filter: blur(1px)brightness(0.8);
+            backdrop-filter: blur(1px)brightness(0.6);
             border-top: 0px;
 
             .title__jumbotron__header{
                 grid-column: 1/-1;
                 text-align: center;
-                font-size: 3vw;
+                font-size: 5vw;
                 padding-left: 0; 
+                
             }
             
             hr{
@@ -38,9 +39,9 @@
     
             .title__jumbotron__paragraph-1{
                 grid-column: 2;
-                font-size: 2vw;
+                font-size: 4vw;
                 width: 70%;
-                color: rgba(255, 255, 255, 0.513);
+                color: rgba(255, 255, 255, 0.609);
             }
             .title__jumbotron__icons{
                 grid-column: 2;
@@ -49,9 +50,9 @@
                 margin: auto;
                 
                 i{
-                color: rgba(255, 255, 255, 0.531);
-                border: 0.1vw solid rgba(255, 255, 255, 0.257);
-                padding: 2vw;
+                color: rgb(255, 255, 255);
+                border: 0.1vw solid rgba(255, 255, 255, 0.445);
+                padding: 3vw;
                 }
             }
         }

@@ -28,7 +28,7 @@ export default class App extends Component{
  render(){
    if(this.state.loaderActive===true){
  return <div>  
-        <Loader/>
+        {/* <Loader/> */}
         <Title/>
         <Launches/>
         <Launches/>

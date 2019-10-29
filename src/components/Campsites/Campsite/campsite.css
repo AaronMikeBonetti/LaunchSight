@@ -34,7 +34,7 @@ html .component__header {
   padding-top: 20px;
   height: 100%;
   width: 100%;
-  font-size: 2.5vw;
+  font-size: 2vw;
   color: white;
   background: rgba(0, 0, 0, 0.36);
 }
@@ -43,27 +43,27 @@ html .component__header {
   grid-column: 1/-1;
   -ms-grid-row: 2;
   grid-row: 2;
-  background: rgba(0, 0, 0, 0.76);
+  background: rgba(0, 0, 0, 0.657);
   -webkit-backdrop-filter: blur(2px);
           backdrop-filter: blur(2px);
   color: #f6ca8f;
   border-top-left-radius: 5%;
   border-top-right-radius: 5%;
+  height: 101%;
 }
 
 .campsite__container .campsite__details__container h2 {
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   padding: 20px;
 }
 
 .campsite__container .campsite__details__container a {
   display: block;
-  width: 100%;
   text-align: center;
   text-decoration: none;
   color: white;
   margin: 20px auto 0 auto;
-  font-size: 1.5vw;
+  font-size: 1vw;
 }
 /*# sourceMappingURL=campsite.css.map */

@@ -1,6 +1,6 @@
 .map__container {
   width: 100%;
-  height: 950px;
+  height: 750px;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.849))), url("../../assets/imgs/space-background.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.849)), url("../../assets/imgs/space-background.jpg");
   background-repeat: repeat;
@@ -9,7 +9,7 @@
 
 .map__container .map {
   width: 80vw;
-  height: 200px;
+  height: 150px;
   margin: auto;
 }
 /*# sourceMappingURL=map.css.map */
