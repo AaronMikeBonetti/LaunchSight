@@ -1,0 +1,16 @@
+@media screen and (max-width: 500px) {
+  .navbar__container {
+    width: 30px;
+  }
+  .navbar__container .fa-rocket {
+    left: -6px;
+    font-size: 20px;
+    -webkit-transform: rotate(-43deg);
+            transform: rotate(-43deg);
+  }
+  .navbar__container .fa-fire {
+    top: 44px;
+    left: 5px;
+  }
+}
+/*# sourceMappingURL=navbar-queries.css.map */

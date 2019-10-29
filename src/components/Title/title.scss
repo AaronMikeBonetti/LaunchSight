@@ -23,20 +23,20 @@
         background-position: center;
         background-size: cover;
         position: absolute;
-        bottom: -450px;
+        bottom: -500px;
         right:0px;
     }
     .clouds__img__left{
         background: url('../../assets/imgs/clouds-left.webp');
         filter: blur(4px) brightness(50%);
         background-repeat:no-repeat;
-        width: 90vw;
-        height: 100%;
+        width: 100%;
+        height: 1000px;
         z-index: 3;
         background-position: center;
         background-size: cover;
         position: absolute;
-        bottom: -270px;
+        bottom: -850px;
         left:-5px;
     }
     
@@ -50,15 +50,12 @@
         grid-template-rows:0.3fr 0.8fr 20px 0.5fr 2fr;
         position: fixed;
         border-top: 230px solid rgba(226, 226, 226, 0.23);
-        
-        color:rgba(231, 231, 231, 0.726);
+        color:rgb(231, 231, 231);
         font-weight: 100;
-        background: rgba(0, 0, 0, 0.301);
+        background: rgba(0, 0, 0, 0.192);
         backdrop-filter: blur(4px);
         text-align: center;
-        
-        
-
+    
         .fade_out{
             opacity: 0;
             animation: fadeOut 0.5s;

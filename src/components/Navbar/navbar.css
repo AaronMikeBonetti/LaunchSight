@@ -42,6 +42,7 @@ html .component__header {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   font-family: "Orbitron";
+  outline: none;
 }
 
 .navbar__container .fa-rocket {

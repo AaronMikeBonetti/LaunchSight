@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './title.css'
+import './title-queries.css'
 
 
 
@@ -15,8 +16,9 @@ export default class Title extends Component {
             const background = document.querySelector('.title__container')
         
             let scrolled = window.pageYOffset
+            let windowWidth = window.innerWidth
             let rate1 = scrolled * - 1
-            let rate2 = scrolled * -.7
+            let rate2 = scrolled * - 1.5
             let rate3 = scrolled / 3
 
             //add cloud parallax effect
@@ -29,7 +31,8 @@ export default class Title extends Component {
                 })
             }
             //Add jumbotron fade in and out
-            if(scrolled>300 && scrolled < 1000){
+            if(window.innerWidth > 1200){
+            if(scrolled > 300 && scrolled < 1000){
                 this.setState({
                     isFaded:true
                 })
@@ -37,6 +40,7 @@ export default class Title extends Component {
             else{
                 return
             }
+        }
         })
         
     }
@@ -45,7 +49,7 @@ export default class Title extends Component {
             <div id='title' className='title__container'>
                 <div className='clouds__img__right'/>
                 <div className='clouds__img__left'/>
-                <div className='box'/>
+                
                 <div className={this.state.isFaded?'title__jumbotron__container fade_out':'title__jumbotron__container fade_in'}>
                     
                     <h1 className='title__jumbotron__header'>Launch-Sight</h1>

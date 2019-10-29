@@ -1,8 +1,4 @@
 @import "../../app.scss";
-html, body {
-    overflow-y:hidden;
-    height:100%;
-  }
 
 .loader__container{
         display: grid;
@@ -13,8 +9,7 @@ html, body {
         height: 100%;
         grid-template-columns: 1fr 300px 1fr;
         grid-template-rows: 1fr 300px 1fr;
-       
-        
+
         .stars, .twinkling{
             grid-column: 1/-1;
             grid-row: 1/-1;
