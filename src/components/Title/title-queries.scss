@@ -24,7 +24,7 @@
             .title__jumbotron__header{
                 grid-column: 1/-1;
                 text-align: center;
-                font-size: 4vw;
+                font-size: 5.5vw;
                 padding-left: 0; 
             }
             
@@ -37,18 +37,18 @@
     
             .title__jumbotron__paragraph-1{
                 grid-column: 2;
-                font-size: 3vw;
+                font-size: 4vw;
                 width: 70%;
                 color: rgba(255, 255, 255, 0.418);
             }
             .title__jumbotron__icons{
                 grid-column: 2;
-                font-size: 2vw;
+                font-size: 3vw;
                 width: 60%;
                 margin: auto;
                 
                 i{
-                color: rgba(255, 255, 255, 0.253);
+                color: rgba(255, 255, 255, 0.431);
                 border: 0.3vw solid rgba(255, 255, 255, 0.157);
                 padding: 2vw;
                 }
